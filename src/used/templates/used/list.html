@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'used:add' %}"><button type="button">Add Used Car</button></a>
+        <div class='row'>
+
+    {% for obj in object_list %}
+        <div class='col'>
+        {{ forloop.counter }}
+        {% include 'used/snippets/card.html' with instance=obj %}  
+        
+        {% if forloop.counter|divisibleby:3 %}
+         </div> </div><div class='row'><div class='col-12'><hr/></div>
+        {% elif forloop.counter|divisibleby:2 %}
+            </div> </div><div class='row'><div class='col-12'><hr/></div>
+        {% else %}
+         </div>  
+        {% endif %}
+       
+    
+    {% endfor %}
+</div>
+{% endblock %}
