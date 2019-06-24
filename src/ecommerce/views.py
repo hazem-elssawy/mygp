@@ -44,4 +44,5 @@ def contact_page(request):
 def index(request):
     return render(request, "index.html")
 
-
+def newz(request):
+    return render(request, "newd/newz.html")
