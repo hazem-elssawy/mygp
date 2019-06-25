@@ -11,7 +11,7 @@ from .forms import UsedForm
 
 
 class ProductFeaturedListView(ListView):
-    template_name = "used/list.html"
+    template_name = "newu/newz.html"
 
     def get_queryset(self, *args, **kwargs):
         request = self.request
@@ -29,7 +29,7 @@ class ProductFeaturedDetailView(DetailView):
 
 
 class ProductListView(ListView):
-    template_name = "used/list.html"
+    template_name = "newu/newz.html"
 
     # def get_context_data(self, *args, **kwargs):
     #     context = super(ProductListView, self).get_context_data(*args, **kwargs)
@@ -46,7 +46,7 @@ def product_list_view(request):
     context = {
         'object_list': queryset
     }
-    return render(request, "used/list.html", context)
+    return render(request, "newu/newz.html", context)
 
 
 

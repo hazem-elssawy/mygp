@@ -28,7 +28,7 @@ from addresses.views import checkout_address_create_view, checkout_address_reuse
 from .views import home_page, about_page, contact_page, index, newz
 
 urlpatterns = [
-    url(r'^test', index, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^newz', newz, name='newz'),
     url(r'^$', home_page, name='home'),
     url(r'^about/$', about_page, name='about'),

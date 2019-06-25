@@ -129,7 +129,7 @@ $(document).ready(function() {
 	<nav class="col-md-18-24"> 
 	<ol class="breadcrumb">
 	    <li class="breadcrumb-item"><a href="#">Home</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">New cars</li>
+	    <li class="breadcrumb-item active" aria-current="page">Used cars</li>
 	</ol>  
 	</nav> <!-- col.// -->
 	<div class="col-md-3-24 text-right"> 
@@ -157,6 +157,9 @@ $(document).ready(function() {
 					<span class="px-2"> - </span>
 				<input class="form-control form-control-sm" placeholder="Max" type="number">
 				<button type="submit" class="btn btn-sm ml-2">Ok</button>
+				<li class="list-inline-item">
+				<a href="{% url 'used:add' %}"><button type="button" class="btn btn-warning">Add Used Car</button></a>
+			</li>
 			</div>
 		  </li>
 		</ul>

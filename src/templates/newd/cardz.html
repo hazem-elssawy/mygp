@@ -1,12 +1,14 @@
-<div class="col-md-3 col-sm-6">
+
 	<figure class="card card-product">
-		<div class="img-wrap"> <img src="{{ instance.image.url }}"></div>
+        {% if instance.image %}
+        <div class="img-wrap"> <img src="{{ instance.image.url }}"></div>
+        {% endif %}
 		<figcaption class="info-wrap">
 			<a href="#" class="title">{{ instance.title }}</a>
 			<div class="price-wrap">
 				<span class="price-new">{{ instance.price}}</span>
-				<del class="price-old">$1980</del>
-			</div> <!-- price-wrap.// -->
+                <del class="price-old">$1980</del>
+                <a href="{{ instance.get_absolute_url }}" class="btn btn-warning">View</a>
+            </div> <!-- price-wrap.// -->
 		</figcaption>
 	</figure> <!-- card // -->
-</div> <!-- col // -->
